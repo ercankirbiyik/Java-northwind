@@ -1,5 +1,5 @@
 package kodlamaio.northwind.business.abstracts;
- 
+
 import java.util.List;
 
 import kodlamaio.northwind.core.utilities.results.DataResult;
