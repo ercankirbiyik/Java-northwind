@@ -26,9 +26,9 @@ public class ProductManager implements ProductService {
 
 	@Override
 	public DataResult<List<Product>> getAll() {
-		
-		return new SuccessDataResult<List<Product>>
-		(this.productDao.findAll(), "Data listed");
+		    
+			return new SuccessDataResult<List<Product>>
+			(this.productDao.findAll(),"Data listed");			
 				
 	}
 
@@ -38,4 +38,47 @@ public class ProductManager implements ProductService {
 		return new SuccessResult("Product added");
 	}
 
+	@Override
+	public DataResult<Product> getByProductName(String productName) {
+		return new SuccessDataResult<Product>
+		(this.productDao.getByProductName(productName),"Data listed");	
+	}
+
+	@Override
+	public DataResult<Product> getByProductNameAndCategoryId(String productName, int categoryId) {
+		//business codes
+		
+		return new SuccessDataResult<Product>
+		(this.productDao.getByProductNameAndCategory(productName,categoryId),"Data listed");
+	}
+
+	@Override
+	public DataResult<List<Product>> getByProductNameOrCategoryId(String productName, int categoryId) {
+		return new SuccessDataResult<List<Product>>
+		(this.productDao.getByProductNameOrCategory(productName, categoryId),"Data listed");
+	}
+
+	@Override
+	public DataResult<List<Product>> getByCategoryIdIn(List<Integer> categories) {
+		return new SuccessDataResult<List<Product>>
+		(this.productDao.getByCategoryIn(categories),"Data listed");
+	}
+
+	@Override
+	public DataResult<List<Product>> getByProductNameContains(String productName) {
+		return new SuccessDataResult<List<Product>>
+		(this.productDao.getByProductNameContains(productName),"Data listed");
+	}
+
+	@Override
+	public DataResult<List<Product>> getByProductNameStartsWith(String productName) {
+		return new SuccessDataResult<List<Product>>
+		(this.productDao.getByProductNameStartsWith(productName),"Data listed");
+	}
+
+	@Override
+	public DataResult<List<Product>> getByNameAndCategory(String productName, int categoryId) {
+		return new SuccessDataResult<List<Product>>
+		(this.productDao.getByNameAndCategory(productName,categoryId),"Data listed");
+	}
 }
