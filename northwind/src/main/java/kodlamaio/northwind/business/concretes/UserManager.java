@@ -15,7 +15,7 @@ import kodlamaio.northwind.core.utilities.results.SuccessResult;
 public class UserManager implements UserService {
 	
 	private UserDao userDao;
-	
+	 
 	@Autowired
 	public UserManager(UserDao userDao) {
 		super();

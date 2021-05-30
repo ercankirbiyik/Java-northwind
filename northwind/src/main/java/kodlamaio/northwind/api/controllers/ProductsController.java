@@ -59,7 +59,7 @@ public class ProductsController {
 	@GetMapping("/getByProductNameContains")
 	public DataResult<List<Product>> getByProductNameContains(String productName){
 	return this.productService.getByProductNameContains(productName);
-	}
+	} 
 	
 	@GetMapping("/getAllByPage")
 	DataResult<List<Product>> getAll(int pageNo, int pageSize){

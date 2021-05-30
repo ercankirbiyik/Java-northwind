@@ -1,6 +1,6 @@
 package kodlamaio.northwind.entities.concretes;
 
-
+ 
 
 import java.util.List;
 

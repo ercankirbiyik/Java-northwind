@@ -7,7 +7,7 @@ import kodlamaio.northwind.core.utilities.results.DataResult;
 import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.entities.concretes.Product;
 import kodlamaio.northwind.entities.dtos.ProductWithCategoryDto;
-
+ 
 public interface ProductService {
 	DataResult<List<Product>> getAll();
 	DataResult<List<Product>> getAllSorted();

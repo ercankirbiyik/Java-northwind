@@ -22,7 +22,7 @@ import kodlamaio.northwind.entities.dtos.ProductWithCategoryDto;
 public class ProductManager implements ProductService {
 
 	private ProductDao productDao;
-	
+	 
 	@Autowired
 	public ProductManager(ProductDao productDao) {
 		super();
