@@ -12,26 +12,26 @@ import kodlamaio.northwind.core.utilities.results.SuccessDataResult;
 import kodlamaio.northwind.core.utilities.results.SuccessResult;
 
 @Service
-public class UserManager implements UserService {
-	
+public class UserManager implements UserService{
+
 	private UserDao userDao;
-	 
+	
 	@Autowired
 	public UserManager(UserDao userDao) {
 		super();
 		this.userDao = userDao;
 	}
-
 	@Override
 	public Result add(User user) {
+		// TODO Auto-generated method stub
 		this.userDao.save(user);
-		return new SuccessResult("User added");
+		return new SuccessResult("Başarılı şekilde kullanıcı eklendi");
 	}
 
 	@Override
 	public DataResult<User> findByEmail(String email) {
-		return new SuccessDataResult<User>(this.userDao.findByEmail(email), "User found");
-
+		// TODO Auto-generated method stub
+		return new SuccessDataResult<User>(this.userDao.findByEmail(email),"Kullanıcı Getirildi");
 	}
 
 }
